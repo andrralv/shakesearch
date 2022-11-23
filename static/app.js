@@ -25,14 +25,6 @@ const Controller = {
         console.error("Search query cannot be empty");
       }
     });
-
-    (async () => {
-      const offsetTop = document.querySelector("#shake-search-title").offsetTop;
-      await scroll({
-        top: offsetTop - 20,
-        behavior: "smooth"
-      });
-    })();
   },
 
   updateRows: (results, query) => {
@@ -42,7 +34,7 @@ const Controller = {
       `<li class="quote"><span class="quote-number">${index+1}</span><span class="quote-text">...${result}...</span><li/>`)
     const sanitizedRows = rows.join("");
     list.innerHTML = sanitizedRows;
-    summary.innerHTML = `Search Results containing "${query}" (${rows.length}):`
+    summary.innerHTML = `Search results containing "${query}" (${rows.length}):`
   },
 
   checkSpelling: (query) => {
