@@ -23,6 +23,7 @@ Here's a list of changes I added to the app, in order of implementation priority
 ### Possible Improvements and Brainstorming
 
 - While the search now handles different types of casing. More unusual cases like `haMleT` don't work. I left it out of scope.
-- `typo` does a good job at trying to complete the word when the user misses a character or misspells a word. But it's not as great as something like Google autocomplete. So a full fuzzy search algorithm is not implemented (out of scope).
-- I had this weird idea about connecting OpenAI and using the search input + keywords from a verse to render an Open AI image as an illustration next to each verse. But unfortunately the complexity of handling multiple images would me the app slow down a lot while waiting for the request.
+- `typo` does a good job at trying to complete the word when the user misses a character or misspells a word. But it's not as great as something like Google autocomplete. So a full fuzzy search algorithm with multiple words is not implemented (out of scope).
+- While the app should render fine in mobile devices, responsiveness was left out of scope.
+- I had this weird idea about connecting OpenAI and using the search input + keywords from a verse to render an Open AI image as an illustration next to each verse. But unfortunately the complexity of handling multiple images would make the app slow down a lot while waiting for the request.
 - I think it'd be cool for the user to be able to click and save their favorite verses. This would mean either creating a session or storing the favorites in a Cookie (out of scope).
